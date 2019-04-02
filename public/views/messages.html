@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Messages
+    </title>
+    <link rel="stylesheet" type="text/css" href="mean_1.css">
+</head>
+
+<body>
+    <h4>Messages: </h4>
+    <div ng-repeat="x in message_data track by $index">
+        <div> <label>Name:</label>
+                {{x.username}}
+        </div>
+    </br> 
+        <div> <label>Message title: </label>
+                {{x.messageTitle}}
+        </div>
+    </br>
+        <a href="#/details/{{$index}}">Click to view details</a>
+    </br></br>
+    <div>
+        <input type="checkbox" name="checkbox1" value="MarkasImportant" ng-model="isImportant" ng-click="markAsImportant(x._id)">Mark as Important
+        <br>
+    </div>
+       <button id="btn_delete" ng-click="deleteMessage(x._id)">Delete</button> 
+        </br></br>
+       
+    </div>
+
+    <form method="POST">
+        
+        <select class="form-control form-control-sm col-2 d-inline" name="repeatSelect" id="repeatSelect"
+            ng-model="message_input.username" required>
+            <option ng-repeat="val in userlist" ng-value="{{val.username}}">{{val.username}}</option>
+            <option style="display:none" value="">select user</option>
+        </select>
+
+        <!-- <input type="text" placeholder="To: " ng-model="message_input.username" required/>
+        <li ng-repeat='person in userlist | filter:searchText'> {{person.username}} </li> -->
+
+        </br></br>
+        <input type="text" placeholder="Type your message title here" ng-model="message_input.messageTitle" required/>
+        </br></br>
+        <input type="text" placeholder="Type your message body here" ng-model="message_input.messageBody" required/>
+        <br></br>
+        <button id="enterMessage_btn" ng-click="enterMessage()"> Send </button>
+        
+    </form>
+    
+</body>
+</html>

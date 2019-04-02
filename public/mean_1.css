@@ -1,0 +1,141 @@
+
+body{
+	margin: 0 auto;
+	width: 80%;
+	padding: 20px;
+  	background-color: #ffffff;
+}
+
+
+nav{
+	background-color: rgb(57, 93, 168);
+	height: 40px;
+	border-radius: 5px;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li{
+	float: left;
+	padding: 11px;
+}
+
+nav ul li a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+nav ul li:hover {
+	background-color: rgb(43, 74, 160);
+}
+
+input[type=text]  {
+	width: 50%;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=password]  {
+	width: 50%;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type=number]  {
+	width: 50%;
+	padding: 12px 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#signUp_btn {
+
+  background-color:  rgb(57, 93, 168); 
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#enterMessage_btn{
+
+  background-color:  rgb(57, 93, 168); 
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#login_btn{
+
+  background-color:  rgb(57, 93, 168); 
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#btn_delete{
+	background-color:  rgb(57, 93, 168); 
+	border: none;
+	color: white;
+	padding: 8px;
+	font-size: 16px;
+	border-radius: 8px;
+}
+
+#btn_details_delete{
+	background-color:  rgb(57, 93, 168); 
+	border: none;
+	color: white;
+	padding: 8px;
+	font-size: 16px;
+	border-radius: 8px;
+}
+
+#details_button{
+	
+  background-color:  rgb(57, 93, 168);
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#back_btn{
+  
+  background-color:  rgb(57, 93, 168);
+  border: none;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px){
+	body{
+		width: 90%;
+	}
+	nav{
+		height: 160px;
+		width: 90%;
+	}
+	nav ul li{
+		float: none;
+		width:90%;
+	}
+	
+}

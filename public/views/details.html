@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Welcome
+    </title>
+    <link rel="stylesheet" type="text/css" href="mean_1.css">
+</head>
+<body>
+    <h3>Message</h3>
+    <div ng-repeat="values in message_details_data ">
+         <div>
+            <label>From: </label>
+            {{values.username}}
+         </div> 
+        </br></br>
+         <div>
+            <label>Message: </label>
+             {{values.messageBody}}
+         </div>  
+    </div>
+    </br></br>
+
+    <button id="back_btn" ng-click="backToMessage()"> Go Back</button>
+    </br></br>
+       
+    <button id="btn_details_delete" ng-click="deleteFromDetails(x._id)">Delete</button> 
+
+    </br></br>
+    
+    <form method="POST">
+
+        <select class="form-control form-control-sm col-2 d-inline" name="repeatSelect" id="repeatSelect"
+            ng-model="reply_message.username" required>
+            <option ng-repeat="val in userlist_details" ng-value="{{val.username}}">{{val.username}}</option>
+            <option style="display:none" value="">select user</option>
+        </select>
+
+            <!-- <input type="text" placeholder="To: " ng-model="reply_message.username"/> -->
+            </br></br>
+            <input type="text" placeholder="Reply title" ng-model="reply_message.messageTitle"/>
+            </br></br>
+            <input type="text" placeholder="Reply Description" ng-model="reply_message.messageBody"/>
+            <br></br>
+            <button id="details_button" ng-click="sendMessagefromDetails()"> Send Message </button>
+            
+        </form>
+    
+</body>
+</html>

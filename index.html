@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Welcome
+    </title>
+    <link rel="stylesheet" type="text/css" href="mean_1.css">
+
+</head>
+
+<body ng-app="myapp">
+    <div ng-controller="mycntrl">
+        <nav>
+            <ul>
+                <li ng-if="authstatus">
+                    <a href="/">Welcome</a>
+                </li>
+                <li ng-if="authstatus">
+                    <a href="#/signup">Signup</a>
+                </li>
+                <li ng-if="authstatus">
+                    <a href="#/login">Login</a>
+                </li>
+                <li ng-if="!authstatus">
+                    <a href="#/home">Home</a>
+                </li>
+                <li ng-if="!authstatus">
+                    <a href="#/messages">Messages</a>
+                </li>
+                <li ng-if="!authstatus">
+                    <a href="#/login" ng-click="logOut()">logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div ng-view=""></div>
+
+    </div>
+
+
+    <script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

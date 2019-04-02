@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Sign Up
+    </title>
+    <link rel="stylesheet" type="text/css" href="mean_1.css">
+</head>
+
+<body>
+
+    <h1>Sign Up</h1>
+    <form method="POST">
+
+        <input type="text" ng-model="user.username" placeholder="username" required />
+        </br></br>
+
+        <input type="password" ng-model="user.password" placeholder="password" required />
+        </br></br>
+
+        <input type="text" ng-model="user.firstname" placeholder="firstname" required />
+        </br></br>
+
+        <input type="text" ng-model="user.lastname" placeholder="lastname" required />
+        </br></br>
+
+        <input type="number" ng-model="user.phone" placeholder="phone" required />
+        </br></br>
+
+        <div>
+            <input type=radio value="male" name="gender" ng-model="user.gender_val" />Male
+            <input type=radio value="female" name="gender" ng-model="user.gender_val" />Female
+        </div>
+        </br></br>
+
+        <button id="signUp_btn" ng-click="signUp()">Sign Up</button>
+
+    </form>
+
+</body>
+
+</html>
